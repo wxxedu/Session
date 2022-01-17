@@ -1,11 +1,11 @@
 {
   "name": "apple-session-launcher",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "A Convenient NPM Module that Launches [Session](https://www.stayinsession.com/) via URL scheme.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "tsc && node dist/index.js",
+    "start": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -52,32 +52,34 @@ export class Session {
     }
 
     // declare a public method called start
-    public start(): void {
+    public start(): string {
         let startUrl: string = Session.url + "start";
-        let startParams: string = ""
+        let startParams: string = "?"
         // if the intent is not empty
-        if (this.intent !== "") {
+        if (this.intent) {
             // add the intent to the start params
-            startParams += "?intent=" + this.intent;
+            startParams += "&intent=" + encodeURIComponent(this.intent);
         }
         // if the duration is not empty
         if (this.duration !== 0) {
             // add the duration to the start params
-            startParams += "&duration=" + this.duration;
+            startParams += "&duration=" + encodeURIComponent(this.duration.toString());
         }
         // if the categoryId is not empty
-        if (this.categoryId !== "") {
+        if (this.categoryId) {
             // add the categoryId to the start params
-            startParams += "&categoryId=" + this.categoryId;
+            startParams += "&categoryId=" + encodeURIComponent(this.categoryId);
         }
         // if the categoryName is not empty
-        if (this.categoryName !== "") {
+        if (this.categoryName) {
             // add the categoryName to the start params
-            startParams += "&categoryName=" + this.categoryName;
+            startParams += "&categoryName=" + encodeURIComponent(this.categoryName);
         }
         // open the start url with the start params
         let startUrlWithParams: string = startUrl + startParams;
+        // encode the url
         open(startUrlWithParams);
+        return startUrlWithParams;
     }
     // declare a public method called startPrevious
     public startPrevious(): void {
