@@ -1,0 +1,25 @@
+{
+  "name": "session",
+  "version": "1.0.0",
+  "description": "A Convenient NPM Module that Launches [Session](https://www.stayinsession.com/) via URL scheme.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxxedu/Session.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wxxedu/Session/issues"
+  },
+  "homepage": "https://github.com/wxxedu/Session#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "open": "^8.4.0"
+  }
+}
